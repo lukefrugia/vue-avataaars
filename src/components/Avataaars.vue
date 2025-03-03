@@ -1,65 +1,56 @@
 <template>
-    <svg 
+  <svg
     xmlns="http://www.w3.org/2000/svg"
     :width="width"
     :height="height"
     :viewBox="`0 0 ${maxWidth} ${maxHeight}`"
     :aria-labelledby="iconName"
     role="avatar"
-    >
-      <title
-        :id="iconName"
-        lang="en"
-      >
-        {{ iconName }}
-      </title>
+  >
+    <title :id="iconName" lang="en">
+      {{ iconName }}
+    </title>
 
-      <Background 
-        :type="avatarOptions.backgroundType" 
-        :color="avatarOptions.backgroundColor" 
-      />
+    <Background
+      :type="avatarOptions.backgroundType"
+      :color="avatarOptions.backgroundColor"
+    />
 
-      <Body 
-        :color="avatarOptions.skinColor" 
-      />
+    <Body :color="avatarOptions.skinColor" />
 
-      <Clothes 
-        :type="avatarOptions.clothesType" 
-        :color="avatarOptions.clothesColor" 
-        :graphic="avatarOptions.clothesGraphicsType"
-      />
-            
-      <Face 
-        :eyebrowType="avatarOptions.eyebrowType" 
-        :eyesType="avatarOptions.eyesType" 
-        :mouthType="avatarOptions.mouthType" 
-        :facialHairType="avatarOptions.facialHairType" 
-        :facialHairColor="avatarOptions.facialHairColor" 
-        :topType="avatarOptions.topType" 
-        :topColor="avatarOptions.topColor" 
-        />
+    <Clothes
+      :type="avatarOptions.clothesType"
+      :color="avatarOptions.clothesColor"
+      :graphic="avatarOptions.clothesGraphicsType"
+    />
 
-      <Accessories 
-        :type="avatarOptions.accessoriesType" 
-      />
+    <Face
+      :eyebrowType="avatarOptions.eyebrowType"
+      :eyesType="avatarOptions.eyesType"
+      :mouthType="avatarOptions.mouthType"
+      :facialHairType="avatarOptions.facialHairType"
+      :facialHairColor="avatarOptions.facialHairColor"
+      :topType="avatarOptions.topType"
+      :topColor="avatarOptions.topColor"
+    />
 
-    </svg>
+    <Accessories :type="avatarOptions.accessoriesType" />
+  </svg>
 </template>
-
 
 <script>
 // import { mapState } from 'vuex'
 
-import Background from '../icons/background/Background'
-import Body from '../icons/Body'
-import Clothes from '../icons/clothes/Clothes'
-import Face from '../icons/face/Face'
-import Accessories from '../icons/top/accessories/Accessories'
+import Background from "vue-avataaars/src/icons/background/Background";
+import Body from "vue-avataaars/src/icons/Body";
+import Clothes from "vue-avataaars/src/icons/clothes/Clothes";
+import Face from "vue-avataaars/src/icons/face/Face";
+import Accessories from "vue-avataaars/src/icons/top/accessories/Accessories";
 
-import optionsJSON from '../avataaarsOptions.json'
+import optionsJSON from "vue-avataaars/src/avataaarsOptions.json";
 
 export default {
-  name: 'Avataaars',
+  name: "Avataaars",
   components: {
     Background,
     Body,
@@ -70,7 +61,7 @@ export default {
   props: {
     iconName: {
       type: String,
-      default: 'avatar',
+      default: "avatar",
       required: false,
     },
     width: {
@@ -95,23 +86,20 @@ export default {
     },
     avatarOptions: {
       type: Object,
-      required: false
+      required: false,
     },
   },
   data() {
     return {
       options: optionsJSON.tabs,
-    }
+    };
   },
   methods: {
     forceUpdate() {
-      this.$forceUpdate()
-    }
-  }
-}
+      this.$forceUpdate();
+    },
+  },
+};
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>
