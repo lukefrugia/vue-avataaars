@@ -5,7 +5,16 @@
   "main": "./src/components/Avataaars.vue",
   "module": "./src/components/Avataaars.vue",
   "exports": {
-    ".": "./src/components/Avataaars.vue"
+    ".": {
+      "import": "./src/components/Avataaars.vue",
+      "require": "./src/components/Avataaars.vue"
+    },
+    "./src/icons/background/Background": "./src/icons/background/Background.vue",
+    "./src/icons/Body": "./src/icons/Body.vue",
+    "./src/icons/clothes/Clothes": "./src/icons/clothes/Clothes.vue",
+    "./src/icons/face/Face": "./src/icons/face/Face.vue",
+    "./src/icons/top/accessories/Accessories": "./src/icons/top/accessories/Accessories.vue",
+    "./src/avataaarsOptions.json": "./src/avataaarsOptions.json"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
