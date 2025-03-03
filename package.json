@@ -2,8 +2,11 @@
   "name": "vue-avataaars",
   "description": "A Vue js component for avataaars",
   "version": "0.0.4",
-  "main": "src/components/Avataaars.vue",
-  "module": "src/components/Avataaars.vue",
+  "main": "./src/components/Avataaars.vue",
+  "module": "./src/components/Avataaars.vue",
+  "exports": {
+    ".": "./src/components/Avataaars.vue"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "vue-cli-service serve",
